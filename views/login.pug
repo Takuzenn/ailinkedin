@@ -1,0 +1,20 @@
+extends layouts/login-layout.pug
+
+block content
+    .loginContainer 
+        h1 Your Information 
+        p.errorMessage #{errorMessage}
+        form(method="post")
+            //- input(type="text", name="loginUsername", placeholder="username or email", value=loginUsername, required="")
+            //- input(type="password", name="loginPassword", placeholder="Password", required="")
+
+            input(type="text", name="School", placeholder="School", value="", required="")
+            input(type="text", name="Industries", placeholder="Industries", value="", required="")
+            //- input(type="text", name="loginPassword", placeholder="Job Title", value="", required="")
+            //- input(type="text", name="loginPassword", placeholder="Job Type", value="", required="")
+
+
+
+
+            input(type="submit", value="Submit")
+        a(href="/register") Need an acount? Register here!  

@@ -1,0 +1,39 @@
+extends layouts/login-layout.pug
+
+block content
+    .loginContainer
+        h1 Help you land a Job 
+        h1 By automatic Connection On linkedin
+        form#registerForm(method="post", onsubmit="event.preventDefault(); validateForm();")
+
+            p.errorMessage #{errorMessage}
+            input(type="text", name="email", placeholder="email", value=email)
+            input(type="text", name="username", placeholder="username", value=username)
+            input(type="text", name="name", placeholder="name", value=name, required="")
+            input(type="text", name="school", placeholder="school", value=school)
+            input(type="text", name="industry", placeholder="industry", value=industry, required="")
+            //- input(type="text", name="userName", placeholder="Username", value=userName, required="")
+            //- input(type="email", name="email", placeholder="Email", value=email, required="")
+            //- input#password(type="password", name="password", placeholder="Password", required="")
+            //- input#passwordConf(type="password", name="passwordConf", placeholder="Confirm password", required="")
+            input(type="submit", value="Submit")
+
+        a(href="/login") More like automatic posting functionality? Click here.
+    
+    script.
+        //- var passwordField = document.getElementById("password")
+        //- var passwordConfirmField = document.getElementById("passwordConf")
+        function validateForm() {
+            var form = document.getElementById("registerForm")
+            form.submit();
+        }
+
+
+    //-     function validateForm() {
+    //-         if(passwordField.value != passwordConfirmField.value) {
+    //-             alert("Passwords do not match. Please try again.")
+    //-         }
+    //-         else {
+    //-             form.submit();
+    //-         }
+    //-     }
