@@ -3,6 +3,6 @@ exports.requireLogin = (req, res, next) => {
         return next();
     }
     else {
-        return res.redirect('/option');
+        return res.redirect('/register');
     }
 }
